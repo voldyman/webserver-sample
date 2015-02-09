@@ -14,7 +14,7 @@ LIBS = ${dlib_static}
 
 all: dlib $(SRC)
 	echo $(SRC)
-	${CXX} -o ${BIN}  ${CXX_FLAGS} -I./deps/ ${LIBS} $(OBJS) $(LIBS)
+	${CXX} -o ${BIN}  -I./deps/  $(OBJS) $(LIBS) ${CXX_FLAGS}
 
 
 %.o: %.cc
