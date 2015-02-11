@@ -10,7 +10,7 @@ web_server::on_request(const incoming_things& incoming,
   } else if (incoming.path == "/form_handler") {
     return form_handler(incoming, outgoing);
 
-  } else if (incoming.path == "/ipc") { 
+  } else if (incoming.path == "/ipc") {
     return ipc_handler(incoming, outgoing);
 
   } else {
@@ -83,7 +83,7 @@ web_server::index_handler(const incoming_things& incoming,
        << "<li> <a href='/form_handler'>Form Handling </a></li>"
        << "<li> <a href='/ipc'> Inter Thread communication </a></li>"
        << endl;
-    
+
   return sout.str();
 
 }

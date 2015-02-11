@@ -10,9 +10,9 @@
 
 void run_webserver(std::shared_ptr<dlib::pipe<Message>>& pipe) {
   try {
-    web_server inventrom_server{pipe};
-    inventrom_server.set_listening_port(8080);
-    inventrom_server.start_async();
+    web_server small_server{pipe};
+    small_server.set_listening_port(8080);
+    small_server.start_async();
 
     std::cout << "Listening, http://localhost:8080/" << std::endl
               << "Press any key to exit" << std::endl;
